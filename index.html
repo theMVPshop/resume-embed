@@ -133,8 +133,11 @@
     <div id="moon"></div>
     <div id="clock"></div>
     <script>
-       console.log(document.getElementsByTagName("H1")[0].innerHTML, urlParams.getAll('zip'));
-       document.getElementsByTagName("H1")[0].innerHTML = urlParams.getAll('zip');
+        const queryString = window.location.search;
+        console.log(queryString);
+        const urlParams = new URLSearchParams(queryString);
+        console.log(document.getElementsByTagName("H1")[0].innerHTML, urlParams.getAll('zip'));
+        document.getElementsByTagName("H1")[0].innerHTML = urlParams.getAll('zip');
     </script>
 </body>
 </html>
