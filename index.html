@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #moon, #clock {
+  width: 200px;
+  height:200px;
+  font-size: 6em;
+}
+
+#moon::after {
+  animation: moonPhases 2s linear infinite;
+  display: block;
+  content: "🌑";
+}
+
+#clock::after {
+  animation: clockPhases 7s linear infinite;
+  display: block;
+  content: "🌑";
+}
+
+@keyframes moonPhases {
+  0%{
+    content: "🌑";
+  }
+  14%{
+    content: "🌒";
+  }
+  28%{
+    content: "🌓";
+  }
+  42%{
+    content: "🌔";
+  }
+  56%{
+    content: "🌕";
+  }
+  70%{
+    content: "🌖";
+  }
+  84%{
+    content: "🌗";
+  }
+  100%{
+    content: "🌘";
+  }
+}
+
+@keyframes clockPhases {
+  0%{
+    content: "🕛";
+  }
+  4%{
+    content: "🕧";
+  }
+  8%{
+    content: "🕐";
+  }
+  12%{
+    content: "🕜";
+  }
+  15%{
+    content: "🕑";
+  }
+  19%{
+    content: "🕝";
+  }
+  23%{
+    content: "🕒";
+  }
+  27%{
+    content: "🕞";
+  }
+  32%{
+    content: "🕓";
+  }
+  36%{
+    content: "🕟";
+  }
+  40%{
+    content: "🕔";
+  }
+  44%{
+    content: "🕠";
+  }
+  49%{
+    content: "🕕";
+  }
+  53%{
+    content: "🕡";
+  }
+  57%{
+    content: "🕖";
+  }
+  61%{
+    content: "🕢";
+  }
+  65%{
+    content: "🕗";
+  }
+  69%{
+    content: "🕣";
+  }
+  73%{
+    content: "🕘";
+  }
+  78%{
+    content: "🕤";
+  }
+  83%{
+    content: "🕙";
+  }
+  87%{
+    content: "🕥";
+  }
+  92%{
+    content: "🕚";
+  }
+  100%{
+    content: "🕦";
+  }
+}
+
+    </style>
+</head>
+<body>
+    <h1>This is a test</h1>
+    <div id="moon"></div>
+    <div id="clock"></div>
+</body>
+</html>
