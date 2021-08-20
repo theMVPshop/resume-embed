@@ -18,6 +18,13 @@ const useStyles = makeStyles((theme) => ({
 export default function ResumeBuilder() {
   const classes = useStyles();
 
+  const queryString = window.location.search;
+  const urlParams = new URLSearchParams(queryString);
+  const backgroundColor = urlParams.get('backgroundColor');
+  
+  getComputedStyle(document.documentElement).getPropertyValue('--background');
+  document.documentElement.style.setProperty('--background', backgroundColor);
+
   useEffect(() => {
     const nameData = localStorage.getItem('name');
     const addressData = localStorage.getItem('address');
