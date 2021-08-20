@@ -21,9 +21,13 @@ export default function ResumeBuilder() {
   const queryString = window.location.search;
   const urlParams = new URLSearchParams(queryString);
   const backgroundColor = urlParams.get('backgroundColor');
+  const tabBarColor = urlParams.get('tabBarColor');
   
   getComputedStyle(document.documentElement).getPropertyValue('--background');
   document.documentElement.style.setProperty('--background', backgroundColor);
+
+  getComputedStyle(document.documentElement).getPropertyValue('--background');
+  document.documentElement.style.setProperty('--secondary-green', tabBarColor);
 
   useEffect(() => {
     const nameData = localStorage.getItem('name');
