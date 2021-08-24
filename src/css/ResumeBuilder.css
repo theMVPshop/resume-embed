@@ -16,7 +16,7 @@
 }
 
 .tab-bar {
-  background-color: var(--secondary-green);
+  background-color: var(--resume-background-color);
   color: var(--primary-text-color);
 }
 
@@ -63,15 +63,17 @@
 .resume-navigation {
   display: flex;
   justify-content: flex-end;
-  background-color: var(--secondary-green-opacity);
+  background-color: var(--resume-background-color);
   padding-bottom: 10px;
+  opacity: 0.8;
 }
 
 .resume-clear-top {
   display: flex;
   justify-content: space-between;
-  background-color: var(--secondary-green-opacity);
+  background-color: var(--resume-background-color);
   padding-bottom: 10px;
+  opacity: 0.8;
 }
 
 .resume-clear {

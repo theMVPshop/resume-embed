@@ -26,8 +26,8 @@ export default function ResumeBuilder() {
   getComputedStyle(document.documentElement).getPropertyValue('--background');
   document.documentElement.style.setProperty('--background', backgroundColor);
 
-  getComputedStyle(document.documentElement).getPropertyValue('--background');
-  document.documentElement.style.setProperty('--secondary-green', tabBarColor);
+  getComputedStyle(document.documentElement).getPropertyValue('--resume-background-color');
+  document.documentElement.style.setProperty('--resume-background-color', tabBarColor);
 
   useEffect(() => {
     const nameData = localStorage.getItem('name');
