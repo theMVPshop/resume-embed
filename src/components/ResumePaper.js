@@ -128,6 +128,7 @@ function ResumePaper(props) {
             {/* This maps over the proData array */}
             <div className='work-content'>
               <div className='work-single'>
+
                 <p className='work-one'>
                   <strong>{props.company}</strong>
                   <br />
@@ -140,6 +141,8 @@ function ResumePaper(props) {
                   {props.desc2 === '' ? '' : <li>{props.desc2}</li>}
                   {props.desc3 === '' ? '' : <li>{props.desc3}</li>}
                 </p>
+
+                {props.company2 &&
                 <p className='work-one'>
                   <strong>{props.company2}</strong>
                   <br />
@@ -152,6 +155,8 @@ function ResumePaper(props) {
                   {props.desc22 === '' ? '' : <li>{props.desc22}</li>}
                   {props.desc33 === '' ? '' : <li>{props.desc33}</li>}
                 </p>
+}               
+                {props.company3 && 
                 <p className='work-one'>
                   <strong>{props.company3}</strong>
                   <br />
@@ -164,6 +169,7 @@ function ResumePaper(props) {
                   {props.desc222 === '' ? '' : <li>{props.desc222}</li>}
                   {props.desc333 === '' ? '' : <li>{props.desc333}</li>}
                 </p>
+}
               </div>
             </div>
           </div>
