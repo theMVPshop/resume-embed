@@ -17,10 +17,10 @@ const ResumeAdditionalSkills = (props) => {
           className='sm-btn resume-btn clear'
           onClick={props.clearAdditional}
         >
-          Clear
+          <span className= "btn-text">Clear</span>
         </button>
         <button className='sm-btn resume-btn back' onClick={props.goBack}>
-          Back
+        <span className= "btn-text">Back</span>
         </button>
       </div>
       <div className='form-box'>
@@ -76,10 +76,10 @@ const ResumeAdditionalSkills = (props) => {
             className='sm-btn resume-btn clear'
             onClick={props.clearAdditional}
           >
-            Clear
+            <span className= "btn-text">Clear</span>
           </button>
           <button className='sm-btn resume-btn back' onClick={props.goBack}>
-            Back
+          <span className= "btn-text">Back</span>
           </button>
         </div>
       </div>

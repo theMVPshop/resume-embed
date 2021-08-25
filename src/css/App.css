@@ -38,6 +38,9 @@ body {
   text-transform: uppercase;
   color: var(--primary-text-color);
 }
+.btn-text {
+  mix-blend-mode: difference;
+}
 
 .lg-btn {
   width: 300px;
@@ -47,7 +50,7 @@ body {
   width: 100px;
   padding: 5px;
   margin: 10px;
-  background-color: var(--background);
+  background-color: var(--resume-background-color);
 }
 
 .resume-btn {
@@ -62,7 +65,7 @@ body {
 }
 
 .back {
-  background-color: #e91e62;
+  background-color: var(--background);
   color: var(--primary-text-color);
 }
 

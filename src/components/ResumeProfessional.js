@@ -46,14 +46,14 @@ const ResumeProfessional = (props) => {
     <div className=''>
       <div className='resume-navigation resume-clear'>
         <button className='clear sm-btn  resume-btn ' onClick={props.clearWork}>
-          Clear
+        <span className= "btn-text">Clear</span>
         </button>
         <div className='next-back'>
           <button className='sm-btn resume-btn back' onClick={props.goBack}>
-            Back
+          <span className= "btn-text">Back</span>
           </button>
           <button className='sm-btn resume-btn next' onClick={props.onClick}>
-            Next
+          <span className= "btn-text">Next</span>
           </button>
         </div>
       </div>
@@ -323,14 +323,14 @@ const ResumeProfessional = (props) => {
         </form>
         <div className='resume-clear'>
           <button className='sm-btn resume-btn clear' onClick={props.clearWork}>
-            Clear
+          <span className= "btn-text">Clear</span>
           </button>
           <div className='next-back'>
             <button className='sm-btn resume-btn back' onClick={props.goBack}>
-              Back
+            <span className= "btn-text">Back</span>
             </button>
             <button className='sm-btn resume-btn next' onClick={props.onClick}>
-              Next
+            <span className= "btn-text">Next</span>
             </button>
           </div>
         </div>

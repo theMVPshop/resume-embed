@@ -15,10 +15,10 @@ const ResumeHeader = (props) => {
     <div>
       <div className='resume-clear-top'>
         <button className='sm-btn resume-btn clear' onClick={props.clearHeader}>
-          Clear
+        <span className= "btn-text">Clear</span>
         </button>
         <button className='sm-btn resume-btn next' onClick={props.onClick}>
-          Next
+          <span className= "btn-text">Next</span>
         </button>
       </div>
 
@@ -122,10 +122,10 @@ const ResumeHeader = (props) => {
             className='sm-btn resume-btn clear'
             onClick={props.clearHeader}
           >
-            Clear
+            <span className= "btn-text">Clear</span>
           </button>
           <button className='sm-btn resume-btn next' onClick={props.onClick}>
-            Next
+          <span className= "btn-text">Next</span>
           </button>
         </div>
       </div>
