@@ -134,7 +134,7 @@
 }
 
 .header-h1 {
-  margin-top: 60px;
+  margin-top: 30px;
   text-transform: uppercase;
   font-size: 2em;
   letter-spacing: 3px;
@@ -166,10 +166,10 @@
   padding-top: 10px;
 }
 
-.resume-divider {
+/* .resume-divider {
   margin-top: 25px;
   margin-bottom: 25px;
-}
+} */
 
 .divider {
   width: 55%;
@@ -185,7 +185,12 @@
 }
 
 .work-content,
-.edu-content,
+.edu-content {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+}
+
 .additional-content {
   display: flex;
   flex-direction: row;

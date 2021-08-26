@@ -192,6 +192,7 @@ function ResumePaper(props) {
                 {props.info}
               </p>
               {/* EDU 2 */}
+              {props.institute2 &&
               <p className='edu-single'>
                 <strong>{props.institute2}</strong>
                 <br />
@@ -203,7 +204,9 @@ function ResumePaper(props) {
                 <br />
                 {props.info2}
               </p>
+}
               {/* EDU 3 */}
+              {props.institute3 &&
               <p className='edu-single'>
                 <strong>{props.institute3}</strong>
                 <br />
@@ -215,6 +218,7 @@ function ResumePaper(props) {
                 <br />
                 {props.info3}
               </p>
+}
             </div>
           </div>
 
