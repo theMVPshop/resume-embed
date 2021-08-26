@@ -524,10 +524,10 @@ export default function ResumeBuilder() {
             value={tab}
             onChange={handleChange}
           >
-            <Tab label='Header' />
-            <Tab label='Work Experience' />
-            <Tab label='Education' />
-            <Tab label='+ Additional Skills'></Tab>
+            <Tab style={{mixBlendMode: "difference"}} label='Header' />
+            <Tab style={{mixBlendMode: "difference"}} label='Work Experience' />
+            <Tab style={{mixBlendMode: "difference"}} label='Education' />
+            <Tab style={{mixBlendMode: "difference"}} label='+ Additional Skills'></Tab>
           </Tabs>
         </div>
         {tab === 0 && (
