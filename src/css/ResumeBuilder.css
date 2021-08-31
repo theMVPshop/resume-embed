@@ -101,6 +101,7 @@
   margin-bottom: 0.5cm;
   box-shadow: 0 0 0.5cm #7b7d7d;
   width: 21cm;
+  min-height: 24cm;
   height: fit-content;
 }
 
