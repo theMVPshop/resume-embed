@@ -5,6 +5,8 @@
 
 .resume-container {
   width: 40%;
+  height: fit-content;
+
   background-color: white;
   box-shadow: 0 0 0.5cm #7b7d7d;
   z-index: 1;
