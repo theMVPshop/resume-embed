@@ -1,13 +1,16 @@
 import React, { useState, useEffect } from 'react';
+import { PDFDownloadLink, setDocument } from '@react-pdf/renderer';
 import { v4 as uuidv4 } from 'uuid';
 import Tabs from '@material-ui/core/Tabs';
 import Tab from '@material-ui/core/Tab';
 import { makeStyles } from '@material-ui/core/styles';
 import ResumeHeader from './ResumeHeader';
+import ResumeDocument from './ResumeDocument';
 import ResumePaper from './ResumePaper';
 import ResumeProfessional from './ResumeProfessional';
 import ResumeEducation from './ResumeEducation';
 import ResumeAdditionalSkills from './ResumeAdditionalSkills';
+
 
 const useStyles = makeStyles((theme) => ({
   indicator: {
@@ -735,6 +738,64 @@ export default function ResumeBuilder() {
         skills={skills}
         setSkills={setSkills}
       />
+    <PDFDownloadLink document={<ResumeDocument
+      name={name}
+      address={address}
+      city={city}
+      state={state}
+      zip={zip}
+      phone={phone}
+      email={email}
+      summary={summary}   
+      company2={company2}
+      company3={company3}
+      location={location}
+      location2={location2}
+      location3={location3}
+      position={position}
+      position2={position2}
+      position3={position3}
+      start={start}
+      start2={start2}
+      start3={start3}
+      end={end}
+      end2={end2}
+      end3={end3}
+      desc1={desc1}
+      desc11={desc11}
+      desc111={desc111}
+      desc2={desc2}
+      desc22={desc22}
+      desc222={desc222}
+      desc3={desc3}
+      desc33={desc33}
+      desc333={desc333}
+      institute={institute} 
+      instLocation={instLocation}
+      major={major}
+      graduation={graduation}
+      info={info}
+      institute2={institute2}
+      instLocation2={instLocation2}
+      major2={major2}
+      graduation2={graduation2}
+      info2={info2}
+      institute3={institute3}
+      instLocation3={instLocation3}
+      major3={major3}
+      graduation3={graduation3}
+      info3={info3}
+      addSkillsData={addSkillsData}
+      skill1={skill1}
+      skills={skills}
+      setSkills={setSkills}
+      
+      
+      
+      />} fileName="NameAddress.pdf">
+      {({ blob, url, generateDocument, error }) => (generateDocument ? 'Loading document...' : 'Resume to PDF!')}
+    </PDFDownloadLink>
+    <button onCLick={setDocument} > </button>
     </div>
-  );
+);
 }

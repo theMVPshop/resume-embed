@@ -1,11 +1,12 @@
-import React from 'react';
-import Pdf from 'react-to-pdf';
+import React, {useState} from 'react';
+import { Page, Text, View, Document, StyleSheet } from '@react-pdf/renderer';
 import PictureAsPdfIcon from '@material-ui/icons/PictureAsPdf';
 import Avatar from '@material-ui/core/Avatar';
 import Tooltip from '@material-ui/core/Tooltip';
 import ClearIcon from '@material-ui/icons/Clear';
 import { green, pink } from '@material-ui/core/colors';
 import { makeStyles } from '@material-ui/core/styles';
+// import Example from './Example'
 
 const useStyles = makeStyles((theme) => ({
   green: {
@@ -27,9 +28,25 @@ const useStyles = makeStyles((theme) => ({
   },
 }));
 
-const ref = React.createRef();
+// Create PDF Styles
+const styles = StyleSheet.create({
+  page: {
+    flexDirection: 'row',
+    backgroundColor: '#E4E4E4'
+  },
+  section: {
+    margin: 10,
+    padding: 10,
+    flexGrow: 1
+  }
+});
+
+//creates access to DOM nodes or React elements created in the Render method
+// const ref = React.createRef();
+
 
 function ResumePaper(props) {
+  const [generatePdf, setPdf] = useState(false);
   const classes = useStyles();
   // Work Experience Title
   let proTitle;
@@ -92,8 +109,13 @@ function ResumePaper(props) {
           <Avatar className={classes.pink}>
             <ClearIcon onClick={props.handleDeleteData} />
           </Avatar>
-        </Tooltip>
-        <Pdf targetRef={ref} filename={`${props.name}.pdf`}>
+          </Tooltip>
+        {/* {generatePdf && 
+        <div>...generating PDF</div>
+        } */}
+
+{/* 
+<Pdf targetRef={ref} filename={`${props.name}.pdf`}>
           {({ toPdf }) => (
             <Tooltip title='Save to PDF' placement='right'>
               <Avatar className={classes.green}>
@@ -101,9 +123,10 @@ function ResumePaper(props) {
               </Avatar>
             </Tooltip>
           )}
-        </Pdf>
+        </Pdf> */}
+       
       </div>
-      <div size='A4' className='page' ref={ref}>
+      <div size='A4' className='page' >
         {/* HEADER */}
         <div className='resume-header'>
           <div className='content-header'>
@@ -237,8 +260,8 @@ function ResumePaper(props) {
                 <p key={id}>
                   {skill.select === false ? (
                     ''
-                  ) : (
-                    <p className='additional-single'>
+                    ) : (
+                      <p className='additional-single'>
                       <li className='list-item'>{skill.name}</li>
                     </p>
                   )}
