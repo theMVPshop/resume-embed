@@ -738,7 +738,8 @@ export default function ResumeBuilder() {
         skills={skills}
         setSkills={setSkills}
       />
-    <PDFDownloadLink document={<ResumeDocument
+    <PDFDownloadLink document={
+    <ResumeDocument
       name={name}
       address={address}
       city={city}
@@ -747,6 +748,7 @@ export default function ResumeBuilder() {
       phone={phone}
       email={email}
       summary={summary}   
+      company={company}
       company2={company2}
       company3={company3}
       location={location}
@@ -792,10 +794,13 @@ export default function ResumeBuilder() {
       
       
       
-      />} fileName="NameAddress.pdf">
+      />
+      } 
+      
+      fileName="resume.pdf">
       {({ blob, url, generateDocument, error }) => (generateDocument ? 'Loading document...' : 'Resume to PDF!')}
     </PDFDownloadLink>
-    <button onCLick={setDocument} > </button>
+    <button onCLick={setDocument}> </button>
     </div>
 );
 }
