@@ -473,8 +473,8 @@ export default function ResumeBuilder() {
       { id: 2, name: 'X-Ray Skills' },
       { id: 3, name: '4-Handed Dentistry' },
       { id: 4, name: 'Great Attitude' },
-      { id: 5, name: 'Compassion' },
-      { id: 6, name: 'Detail Oriented' },
+      { id: 5, name: 'Detail Oriented' },
+      { id: 6, name: 'Compassion' },
       { id: 7, name: 'Efficiency' },
       { id: 8, name: 'Organization' },
       { id: 9, name: 'Motivated' },
@@ -791,6 +791,7 @@ export default function ResumeBuilder() {
       skill1={skill1}
       skills={skills}
       setSkills={setSkills}
+      
       
       
       
