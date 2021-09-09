@@ -29,9 +29,13 @@ section: {
   marginRight: 20,
   marginLeft: 20,
   marginBottom: 20,
-
   padding: 15,
   flexGrow: 1,
+},
+
+section2: {
+  marginLeft: 15,
+  textAlign: 'left',
 },
 
 name: {
@@ -105,7 +109,7 @@ name: {
     marginBottom: 3,
     fontSize: 12,
     fontFamily: 'Lora',
-    fontWeight: 500,
+    fontWeight: 700,
   },
   
   detail: {    
@@ -115,14 +119,10 @@ name: {
 
 
   
- bullet: {    
-    
+ bullet: {      
     marginBottom: 6,
-  
-    textIndent: 5,
+    textAlign: 'left',
     fontSize: 10,
-    
-
   },
 
   detail2: {    
@@ -161,7 +161,7 @@ name: {
   bull: {
     lineHeight: 3,
     fontSize: 10,
-    marginTop: 12,
+    marginTop: 20,
     textAlign: 'center',
   },
 
@@ -172,7 +172,7 @@ const ResumeDocument = (props) => {
 
   return (
     <Document>
-      <Page size="A4" style={styles.page}>
+      <Page wrap size="A4" style={styles.page}>
         <View style={styles.section}>
           <Text style={styles.name} fixed>{props.name}</Text>  
           <Text style={styles.address}>{props.address} </Text> 
@@ -186,29 +186,35 @@ const ResumeDocument = (props) => {
           <Text style={styles.line} > </Text>
           <Text style={styles.divider2}>PROFESSIONAL EXPERIENCE</Text>
     
-          <Text style={styles.compname}>{props.company}</Text>
+          <Text style={styles.compname}>{props.company}</Text> 
           <Text style={styles.detail}>{props.position}</Text>
           <Text style={styles.detail}>{props.location}</Text>
           <Text style={[styles.detail, {marginBottom: 10}]}>{props.start}  {props.end}</Text>
-          <Text style={styles.bullet}>  {props.desc1}</Text>
-          <Text style={styles.bullet}>  {props.desc2}</Text>
-          <Text style={styles.bullet}>  {props.desc3}</Text>
+          <View style={styles.section2}>
+          <Text style={styles.bullet}><span>&bull;</span> {props.desc1}</Text>
+          <Text style={styles.bullet}><span>&bull;</span> {props.desc2}</Text>
+          <Text style={styles.bullet}><span>&bull;</span> {props.desc3}</Text>
+          </View>
        
           <Text style={styles.compname}>{props.company2}</Text>
           <Text style={styles.detail}>{props.location2}</Text>
           <Text style={styles.detail}>{props.position2}</Text>
           <Text style={[styles.detail, {marginBottom: 10}]}>{props.start2}  {props.end2}</Text>
-          <Text style={styles.bullet}>   {props.desc11}</Text>
-          <Text style={styles.bullet}>   {props.desc22}</Text>
-          <Text style={styles.bullet}>   {props.desc33}</Text>
+          <View style={styles.section2}>
+          <Text style={styles.bullet}><span>&bull;</span> {props.desc11}</Text>
+          <Text style={styles.bullet}><span>&bull;</span> {props.desc22}</Text>
+          <Text style={styles.bullet}><span>&bull;</span> {props.desc33}</Text>
+         </View>
      
           <Text style={styles.compname}>{props.company3}</Text>
           <Text style={styles.detail}>{props.location3}</Text>
           <Text style={styles.detail}>{props.position3}</Text>
           <Text style={[styles.detail, {marginBottom: 10}]}>{props.start3}  {props.end3}</Text>
-          <Text style={styles.bullet}>  {props.desc111}</Text>
-          <Text style={styles.bullet}>  {props.desc222}</Text>
-          <Text style={styles.bullet}>  {props.desc333}</Text>
+          <View style={styles.section2}>
+          <Text style={styles.bullet}><span>&bull;</span> {props.desc111}</Text>
+          <Text style={styles.bullet}><span>&bull;</span> {props.desc222}</Text>
+          <Text style={styles.bullet}><span>&bull;</span> {props.desc333}</Text>
+          </View>
         
           <Text style={styles.divider2}break>EDUCATION</Text>
           <Text style={styles.detail2}>{props.institute} </Text>

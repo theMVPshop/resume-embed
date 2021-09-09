@@ -4,6 +4,9 @@ import { v4 as uuidv4 } from 'uuid';
 import Tabs from '@material-ui/core/Tabs';
 import Tab from '@material-ui/core/Tab';
 import { makeStyles } from '@material-ui/core/styles';
+import PictureAsPdfIcon from '@material-ui/icons/PictureAsPdf';
+import Avatar from '@material-ui/core/Avatar';
+import Tooltip from '@material-ui/core/Tooltip';
 import ResumeHeader from './ResumeHeader';
 import ResumeDocument from './ResumeDocument';
 import ResumePaper from './ResumePaper';
@@ -799,9 +802,17 @@ export default function ResumeBuilder() {
       } 
       
       fileName="resume.pdf">
+      <div className='save-pdf'>
+      <Tooltip title='Save to PDF' placement='right'>
+      <Avatar className={classes.green} >
+      <PictureAsPdfIcon >
       {({ blob, url, generateDocument, error }) => (generateDocument ? 'Loading document...' : 'Resume to PDF!')}
+       </PictureAsPdfIcon>
+       <button onClick={setDocument}></button>
+      </Avatar>  
+      </Tooltip>
+      </div>
     </PDFDownloadLink>
-    <button onCLick={setDocument}> </button>
     </div>
 );
 }
