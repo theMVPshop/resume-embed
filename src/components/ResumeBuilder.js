@@ -804,7 +804,7 @@ export default function ResumeBuilder() {
       fileName="resume.pdf">
       <div className='save-pdf'>
       <Tooltip title='Save to PDF' placement='right'>
-      <Avatar className={classes.green} >
+      <Avatar className={classes.pink} >
       <PictureAsPdfIcon >
       {({ blob, url, generateDocument, error }) => (generateDocument ? 'Loading document...' : 'Resume to PDF!')}
        </PictureAsPdfIcon>
