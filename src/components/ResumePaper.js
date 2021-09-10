@@ -1,6 +1,5 @@
 import React, {useState} from 'react';
-import { Page, Text, View, Document, StyleSheet } from '@react-pdf/renderer';
-import PictureAsPdfIcon from '@material-ui/icons/PictureAsPdf';
+import { StyleSheet } from '@react-pdf/renderer';
 import Avatar from '@material-ui/core/Avatar';
 import Tooltip from '@material-ui/core/Tooltip';
 import ClearIcon from '@material-ui/icons/Clear';

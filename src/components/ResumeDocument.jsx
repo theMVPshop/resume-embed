@@ -1,6 +1,6 @@
 import React from "react";
 import { Document, Page, Text, View, StyleSheet, Font } from '@react-pdf/renderer';
-import { AutorenewTwoTone } from "@material-ui/icons";
+
 
 
 
@@ -121,7 +121,7 @@ name: {
   
  bullet: {      
     marginBottom: 6,
-    textAlign: 'left',
+    textAlign: 'justify',
     fontSize: 10,
   },
 
@@ -187,13 +187,13 @@ const ResumeDocument = (props) => {
           <Text style={styles.divider2}>PROFESSIONAL EXPERIENCE</Text>
     
           <Text style={styles.compname}>{props.company}</Text> 
-          <Text style={styles.detail}>{props.position}</Text>
           <Text style={styles.detail}>{props.location}</Text>
+          <Text style={styles.detail}>{props.position}</Text>
           <Text style={[styles.detail, {marginBottom: 10}]}>{props.start}  {props.end}</Text>
           <View style={styles.section2}>
-          <Text style={styles.bullet}><span>&bull;</span> {props.desc1}</Text>
-          <Text style={styles.bullet}><span>&bull;</span> {props.desc2}</Text>
-          <Text style={styles.bullet}><span>&bull;</span> {props.desc3}</Text>
+          <Text style={styles.bullet}>{props.desc1}</Text>
+          <Text style={styles.bullet}>{props.desc2}</Text>
+          <Text style={styles.bullet}>{props.desc3}</Text>
           </View>
        
           <Text style={styles.compname}>{props.company2}</Text>
@@ -201,9 +201,9 @@ const ResumeDocument = (props) => {
           <Text style={styles.detail}>{props.position2}</Text>
           <Text style={[styles.detail, {marginBottom: 10}]}>{props.start2}  {props.end2}</Text>
           <View style={styles.section2}>
-          <Text style={styles.bullet}><span>&bull;</span> {props.desc11}</Text>
-          <Text style={styles.bullet}><span>&bull;</span> {props.desc22}</Text>
-          <Text style={styles.bullet}><span>&bull;</span> {props.desc33}</Text>
+          <Text style={styles.bullet}>{props.desc11}</Text>
+          <Text style={styles.bullet}>{props.desc22}</Text>
+          <Text style={styles.bullet}>{props.desc33}</Text>
          </View>
      
           <Text style={styles.compname}>{props.company3}</Text>
@@ -211,9 +211,9 @@ const ResumeDocument = (props) => {
           <Text style={styles.detail}>{props.position3}</Text>
           <Text style={[styles.detail, {marginBottom: 10}]}>{props.start3}  {props.end3}</Text>
           <View style={styles.section2}>
-          <Text style={styles.bullet}><span>&bull;</span> {props.desc111}</Text>
-          <Text style={styles.bullet}><span>&bull;</span> {props.desc222}</Text>
-          <Text style={styles.bullet}><span>&bull;</span> {props.desc333}</Text>
+          <Text style={styles.bullet}>{props.desc111}</Text>
+          <Text style={styles.bullet}>{props.desc222}</Text>
+          <Text style={styles.bullet}>{props.desc333}</Text>
           </View>
         
           <Text style={styles.divider2}break>EDUCATION</Text>
