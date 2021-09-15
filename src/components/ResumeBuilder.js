@@ -4,9 +4,9 @@ import { v4 as uuidv4 } from 'uuid';
 import Tabs from '@material-ui/core/Tabs';
 import Tab from '@material-ui/core/Tab';
 import { makeStyles } from '@material-ui/core/styles';
-import PictureAsPdfIcon from '@material-ui/icons/PictureAsPdf';
-import Avatar from '@material-ui/core/Avatar';
-import Tooltip from '@material-ui/core/Tooltip';
+// import PictureAsPdfIcon from '@material-ui/icons/PictureAsPdf';
+// import Avatar from '@material-ui/core/Avatar';
+// import Tooltip from '@material-ui/core/Tooltip';
 import ResumeHeader from './ResumeHeader';
 import ResumeDocument from './ResumeDocument';
 import ResumePaper from './ResumePaper';
@@ -518,7 +518,7 @@ export default function ResumeBuilder() {
 
     setAddSkillsData(items);
   };
-
+// **********
   return (
     <div className='resume-box'>
       <div className='resume-container'>
@@ -676,8 +676,11 @@ export default function ResumeBuilder() {
         )}
       </div>
 
-      {/* RESUME RENDER */}
-      <ResumePaper
+
+
+
+      {/* RESUME RENDER  */}
+       <ResumePaper
         handleDeleteData={handleDeleteData}
         // HEADER
         name={name}
@@ -740,7 +743,7 @@ export default function ResumeBuilder() {
         skill1={skill1}
         skills={skills}
         setSkills={setSkills}
-      />
+      /> 
     <PDFDownloadLink document={
     <ResumeDocument
       name={name}
@@ -795,24 +798,17 @@ export default function ResumeBuilder() {
       skills={skills}
       setSkills={setSkills}
       
-      
-      
-      
+
       />
       } 
       
       fileName="resume.pdf">
-      <div className='save-pdf'>
-      <Tooltip title='Save to PDF' placement='right'>
-      <Avatar className={classes.pink} >
-      <PictureAsPdfIcon >
-      {({ blob, url, generateDocument, error }) => (generateDocument ? 'Loading document...' : 'Resume to PDF!')}
-       </PictureAsPdfIcon>
-       <button onClick={setDocument}></button>
-      </Avatar>  
-      </Tooltip>
-      </div>
+      {({ blob, url, generateDocument, error }) => (generateDocument ? 'Loading document...' : 'Save to PDF!')}
+        <button  className='sm-btn resume-btn' onClick={setDocument}>Print PDF!
+     </button>
     </PDFDownloadLink>
-    </div>
+   </div>
 );
 }
+
+
