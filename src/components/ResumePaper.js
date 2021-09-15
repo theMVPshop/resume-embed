@@ -28,25 +28,25 @@ const useStyles = makeStyles((theme) => ({
 }));
 
 // Create PDF Styles
-const styles = StyleSheet.create({
-  page: {
-    flexDirection: 'row',
-    backgroundColor: '#E4E4E4'
-  },
-  section: {
-    margin: 10,
-    padding: 10,
-    flexGrow: 1
-  }
-});
+// const styles = StyleSheet.create({
+//   page: {
+//     flexDirection: 'row',
+//     backgroundColor: '#E4E4E4'
+//   },
+//   section: {
+//     margin: 10,
+//     padding: 10,
+//     flexGrow: 1
+//   }
+// });
 
 //creates access to DOM nodes or React elements created in the Render method
 // const ref = React.createRef();
 
 
 function ResumePaper(props) {
-  const [generatePdf, setPdf] = useState(false);
-  const classes = useStyles();
+
+  // const classes = useStyles();
   // Work Experience Title
   let proTitle;
   if (props.company.length < 1) {
@@ -103,12 +103,12 @@ function ResumePaper(props) {
 
   return (
     <div className='right'>
-      <div className='save-clear'>
+      {/* <div className='save-clear'>
         <Tooltip title='Delete All Data' placement='right'>
           <Avatar className={classes.pink}>
             <ClearIcon onClick={props.handleDeleteData} />
           </Avatar>
-          </Tooltip>
+          </Tooltip> */}
         {/* {generatePdf && 
         <div>...generating PDF</div>
         } */}
@@ -124,7 +124,7 @@ function ResumePaper(props) {
           )}
         </Pdf> */}
        
-      </div>
+      {/* </div> */}
       <div size='A4' className='page' >
         {/* HEADER */}
         <div className='resume-header'>
