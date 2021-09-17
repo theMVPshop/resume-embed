@@ -1,124 +1,171 @@
-@import url('./ResumeBuilder.css');
-@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@200;400&display=swap');
+@import url("./ResumeBuilder.css");
+@import url("https://fonts.googleapis.com/css2?family=Raleway:wght@200;400&display=swap");
 
 :root {
-  --primary-green: #28c47d;
-  --resume-background-color: #1b512d;
-  --secondary-green-opacity: rgba(33, 81, 45, 0.3);
-  --accent-green: #b8edd8;
-  --primary-text-color: #f0f0f0;
-  --secondary-text-color: #323232;
-  --background: #f6feff;
+	--primary-green: #28c47d;
+	--resume-background-color: #1b512d;
+	--secondary-green-opacity: rgba(33, 81, 45, 0.3);
+	--accent-green: #b8edd8;
+	--primary-text-color: #f0f0f0;
+	--secondary-text-color: #323232;
+	--background: #f6feff;
 }
 #root {
-  height: 100vh;
+	height: 100vh;
 }
 
 * {
-  margin: 0;
-  padding: 0;
-  text-decoration: none;
-  border: none;
-  /* font-family: "Roboto", san-serf; */
-  font-weight: 400;
-  box-sizing: border-box;
-  font-family: 'Raleway', sans-serif;
+	margin: 0;
+	padding: 0;
+	text-decoration: none;
+	border: none;
+	/* font-family: "Roboto", san-serf; */
+	font-weight: 400;
+	box-sizing: border-box;
+	font-family: "Raleway", sans-serif;
 }
 
 body {
-  background-color: var(--background);
+	background-color: var(--background);
 }
 
 /* BUTTONS */
 .btn {
-  font-size: 15px;
-  font-weight: bold;
-  border: 2px;
-  background-color: var(--background);
-  text-transform: uppercase;
-  color: var(--primary-text-color);
+	font-size: 15px;
+	font-weight: bold;
+	border: 2px;
+	background-color: var(--background);
+	text-transform: uppercase;
+	color: var(--primary-text-color);
 }
 .btn-text {
-  mix-blend-mode: difference;
+	mix-blend-mode: difference;
 }
 
 .lg-btn {
-  width: 300px;
+	width: 300px;
 }
 
+.pdf-btn {
+	width: 125px;
+	position: absolute;
+	top: 1%;
+	left: 75%;
+}
+.preview-btn {
+	visibility: hidden;
+	width: 150px;
+	position: absolute;
+	left: 53%;
+}
 .sm-btn {
-  width: 100px;
-  padding: 5px;
-  margin: 10px;
-  background-color: var(--resume-background-color);
+	width: 100px;
+	padding: 5px;
+	margin: 10px;
+	background-color: var(--resume-background-color);
 }
 
 .resume-btn {
-  border-radius: 3px;
-  margin-top: 18px;
-  margin-left: 8px;
-  margin-right: 8px;
-  font-size: 15px;
-  font-weight: bold;
-  text-transform: uppercase;
-  background-color: var(--resume-background-color);
+	border-radius: 3px;
+	margin-top: 18px;
+	margin-left: 8px;
+	margin-right: 8px;
+	font-size: 15px;
+	font-weight: bold;
+	text-transform: uppercase;
+	background-color: var(--resume-background-color);
 }
 
 .back {
-  background-color: var(--background);
-  color: var(--primary-text-color);
+	background-color: var(--background);
+	color: var(--primary-text-color);
 }
 
 .next {
-  background-color: var(--background);
-  color: var(--primary-text-color);
+	background-color: var(--background);
+	color: var(--primary-text-color);
 }
 
 .clear {
-  background-color: var(--background);
-  color: var(--primary-text-color);
+	background-color: var(--background);
+	color: var(--primary-text-color);
 }
 
 .lg-btn:hover {
-  background-color: var(--primary-green);
+	background-color: var(--primary-green);
 }
 
 .button-box {
-  display: flex;
-  align-items: center;
-  justify-content: center;
+	display: flex;
+	align-items: center;
+	justify-content: center;
 }
 
 .form-btn {
-  min-height: 38px;
-  border-radius: 2px;
-  margin: 0 0 15px;
+	min-height: 38px;
+	border-radius: 2px;
+	margin: 0 0 15px;
 }
 
 @media (max-width: 740px) {
-  .lg-btn {
-    width: 90%;
-  }
+	.lg-btn {
+		width: 90%;
+	}
 }
 
 @media (max-width: 575px) {
-  .sm-btn {
-    width: 90%;
-  }
+	.sm-btn {
+		width: 90%;
+	}
 
-  /* Resume Classes */
-  .clear {
-    width: 50%;
-  }
+	/* Resume Classes */
+	.clear {
+		width: 50%;
+	}
 
-  .next,
-  .back {
-    width: 50%;
-  }
+	.next,
+	.back {
+		width: 50%;
+	}
 
-  .next-back {
-    width: 50%;
-    display: flex;
-    flex-direction: row;
-  }
+	.next-back {
+		width: 50%;
+		display: flex;
+		flex-direction: row;
+	}
+
+	.preview-btn {
+		visibility: visible;
+		width: 150px;
+		margin-right: 10%;
+	}
+
+	.pdf-btn {
+		width: 125px;
+		position: absolute;
+		top: 100%;
+		left: 10%;
+		z-index: 1;
+	}
+	h2 {
+		font-size: 1.3em;
+	}
+	h3 {
+		font-size: 1.1em;
+	}
+	.resume-btn {
+		font-size: 12px;
+	}
+
+	.sm-btn {
+		width: 90px;
+		padding: 5px;
+		margin: 10px;
+	}
+
+	.small-field-box {
+		display: flex;
+		flex-direction: row;
+		justify-content: space-between;
+	}
 }

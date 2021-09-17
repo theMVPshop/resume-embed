@@ -24,6 +24,8 @@ const useStyles = makeStyles((theme) => ({
 export default function ResumeBuilder() {
   const classes = useStyles();
 
+  const [show, toggleShow] = React.useState(true)
+
   const queryString = window.location.search;
   const urlParams = new URLSearchParams(queryString);
   const backgroundColor = urlParams.get('backgroundColor');
@@ -34,6 +36,8 @@ export default function ResumeBuilder() {
 
   getComputedStyle(document.documentElement).getPropertyValue('--resume-background-color');
   document.documentElement.style.setProperty('--resume-background-color', tabBarColor);
+
+
 
   useEffect(() => {
     const nameData = localStorage.getItem('name');
@@ -529,6 +533,8 @@ export default function ResumeBuilder() {
             }}
             value={tab}
             onChange={handleChange}
+            variant="scrollable"
+            scrollButtons="auto"
           >
             <Tab style={{mixBlendMode: "difference"}} label='Header' />
             <Tab style={{mixBlendMode: "difference"}} label='Work Experience' />
@@ -680,7 +686,12 @@ export default function ResumeBuilder() {
 
 
       {/* RESUME RENDER  */}
-       <ResumePaper
+      <div >
+          <button  className=' btn preview-btn resume-btn' onClick={() => toggleShow(!show)}
+          >
+          {show? 'Close Preview' : 'Preview'}
+          </button>
+       {show && <ResumePaper
         handleDeleteData={handleDeleteData}
         // HEADER
         name={name}
@@ -743,7 +754,8 @@ export default function ResumeBuilder() {
         skill1={skill1}
         skills={skills}
         setSkills={setSkills}
-      /> 
+      /> }
+      </div>
     <PDFDownloadLink document={
     <ResumeDocument
       name={name}
@@ -802,9 +814,9 @@ export default function ResumeBuilder() {
       />
       } 
       
-      fileName="resume.pdf">
+      fileName="resume.pdf" >
       {({ blob, url, generateDocument, error }) => (generateDocument ? 'Loading document...' : 'Save to PDF!')}
-        <button  className='sm-btn resume-btn' onClick={setDocument}>Print PDF!
+        <button  className='btn pdf-btn resume-btn' onClick={setDocument}>Print PDF!
      </button>
     </PDFDownloadLink>
    </div>

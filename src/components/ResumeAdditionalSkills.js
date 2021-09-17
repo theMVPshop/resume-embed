@@ -37,13 +37,14 @@ const ResumeAdditionalSkills = (props) => {
             label=''
             onChange={(e) => props.updateSkill1(e.target.value)}
             variant='outlined'
-            style={{ marginTop: 12, marginLeft: 8, marginRight: 8 }}
-          />{' '}
+            style={{ marginTop: 12, marginLeft: 3, marginRight: 8 }}
+          />
           <Button
+        
             variant='contained'
             type='submit'
             onClick={props.addSkills}
-            style={{ marginTop: 6, height: 60, fontSize: 18 }}
+            style={{ marginTop: 6, marginRight: 3, height: 60, fontSize: 16 }}
           >
             add
           </Button>
@@ -64,7 +65,7 @@ const ResumeAdditionalSkills = (props) => {
                     })
                   );
                 }}
-                type='checkbox'
+                type='checkbox' className='larger'
                 checked={d.select}
               />
               <span>{d.name}</span>
