@@ -148,13 +148,13 @@ body {
 		z-index: 1;
 	}
 	h2 {
-		font-size: 1.3em;
+		font-size: 1em;
 	}
 	h3 {
-		font-size: 1.1em;
+		font-size: 0.8em;
 	}
 	.resume-btn {
-		font-size: 12px;
+		font-size: 9px;
 	}
 
 	.sm-btn {

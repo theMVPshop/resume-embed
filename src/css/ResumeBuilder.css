@@ -233,7 +233,7 @@
 		display: flex;
 		flex-direction: column;
 		min-height: 100vh;
-		width: 100vw;
+		width: 90vw;
 		/* overflow: hidden; */
 	}
 	.resume-preview {
@@ -264,13 +264,53 @@
 		font-size: small;
 	}
 	.job-desc {
-		font-size: 18px;
+		font-size: 16px;
 	}
 	.resume-clear-top {
 		justify-content: space-around;
 	}
 
 	.checkbox-container > ul {
-		font-size: 17px;
+		font-size: 15px;
+	}
+
+	.right .page {
+		margin-top: 3.5em;
+		width: 100vw;
+		height: 29.7cm;
+		height: fit-content;
+	}
+
+	/* Resume Preview */
+	.resume-titles {
+		font-size: 0.5em;
+	}
+
+	.header-h1 {
+		font-size: 0.7em;
+		letter-spacing: 2px;
+	}
+
+	.content-header > p,
+	.work-one,
+	.work-one > li,
+	.edu-single,
+	.list-item {
+		font-size: 6px;
+	}
+
+	.additional-single {
+		padding-right: 10px;
+	}
+
+	#outlined-basic,
+	#outlined-multiline-static {
+		font-size: 14px;
+	}
+	.form-style {
+		width: 90%;
+	}
+
+	@media only screen and (min-device-width: 600px) and (orientation: landscape) {
 	}
 }
