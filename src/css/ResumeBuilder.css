@@ -310,7 +310,19 @@
 	.form-style {
 		width: 90%;
 	}
-
-	@media only screen and (min-device-width: 600px) and (orientation: landscape) {
+	@media only screen and (min-device-width: 568px) and (max-device-width: 823px) and (orientation: landscape) {
+		.resume-container {
+			box-shadow: none;
+		}
+		.checkbox-container > ul {
+			font-size: 17px;
+		}
+		.resume-navigation {
+			justify-content: space-around;
+		}
+		.resume-clear-top,
+		.resume-clear {
+			justify-content: space-around;
+		}
 	}
 }
