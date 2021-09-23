@@ -687,11 +687,11 @@ export default function ResumeBuilder() {
 
       {/* RESUME RENDER  */}
       <div >
-          <button  className=' btn preview-btn resume-btn' onClick={() => toggleShow(!show)}
+          <button  className='btn preview-btn resume-btn' onClick={() => toggleShow(!show)}
           >
           {show? 'Close Preview' : 'Preview'}
           </button>
-       {show && <ResumePaper
+       {show && <ResumePaper 
         handleDeleteData={handleDeleteData}
         // HEADER
         name={name}
@@ -756,7 +756,7 @@ export default function ResumeBuilder() {
         setSkills={setSkills}
       /> }
       </div>
-    <PDFDownloadLink document={
+    <PDFDownloadLink className="pdfdownload" document={
     <ResumeDocument
       name={name}
       address={address}

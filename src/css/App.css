@@ -57,6 +57,11 @@ body {
 	width: 150px;
 	position: absolute;
 	left: 53%;
+	color: var(--primary-text-color);
+}
+
+.preview-btn:hover {
+	color: var(--primary-text-color);
 }
 .sm-btn {
 	width: 100px;
@@ -113,9 +118,50 @@ body {
 	}
 }
 
+@media only screen and (min-width: 824px) and (max-width: 1366px) and (orientation: landscape) {
+	.preview-btn {
+		visibility: visible;
+		min-width: 150px;
+		position: absolute;
+		left: 60%;
+		color: var(--primary-text-color);
+	}
+
+	.pdf-btn {
+		width: 150x;
+		height: 35px;
+
+		position: absolute;
+		/* bottom: 10%; */
+		left: 30%;
+		z-index: 2;
+	}
+	.pdfdownload {
+		position: relative;
+	}
+}
 @media only screen and (min-width: 568px) and (max-width: 823px) and (orientation: landscape) {
 	.resume-btn {
 		font-size: 12px;
+	}
+	.preview-btn {
+		visibility: visible;
+		width: 120px;
+		position: absolute;
+		left: 60%;
+		color: var(--primary-text-color);
+	}
+	.pdf-btn {
+		width: 125px;
+		height: 30px;
+		/* position: absolute; */
+		/* bottom: -100%; */
+		left: 25%;
+		z-index: -1;
+	}
+
+	.pdfdownload {
+		position: relative;
 	}
 
 	h2 {
@@ -149,25 +195,29 @@ body {
 
 	.preview-btn {
 		visibility: visible;
-		width: 150px;
-		margin-right: 10%;
+		width: 120px;
+		margin-right: 1%;
+		color: var(--primary-text-color);
 	}
 
 	.pdf-btn {
-		width: 125px;
+		width: 120px;
 		position: absolute;
-		top: 100%;
-		left: 10%;
-		z-index: 1;
+		top: 99.3%;
+		left: 5%;
+		z-index: -1;
 	}
+
 	h2 {
 		font-size: 1.2em;
 	}
+
 	h3 {
 		font-size: 0.9em;
 	}
+
 	.resume-btn {
-		font-size: 9px;
+		font-size: 10px;
 	}
 
 	.sm-btn {

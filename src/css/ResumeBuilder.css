@@ -228,6 +228,35 @@
 	margin-right: 5px;
 }
 
+@media only screen and (min-width: 811px) and (max-width: 1366px) and (orientation: landscape) {
+	.resume-box {
+		position: relative;
+		display: flex;
+		flex-direction: column;
+		width: 100vw;
+	}
+	.resume-container {
+		width: 95vw;
+		height: fit-content;
+	}
+	.resume-preview {
+		visibility: hidden;
+	}
+	.right .page {
+		margin-top: 5em;
+		margin-left: 5%;
+		width: 90vw;
+		height: 29.7cm;
+		height: fit-content;
+	}
+	.MuiTab-wrapper {
+		font-size: medium;
+	}
+	.resume-clear-top,
+	.resume-navigation {
+		justify-content: space-around;
+	}
+}
 @media only screen and (min-device-width: 280px) and (max-device-width: 737px) {
 	.resume-box {
 		display: flex;
@@ -243,7 +272,6 @@
 	.resume-container {
 		overflow-x: hidden;
 		width: 100vw;
-
 		box-shadow: 0 0 0.5cm #7b7d7d;
 		background-color: white;
 	}
@@ -323,6 +351,13 @@
 		.resume-clear-top,
 		.resume-clear {
 			justify-content: space-around;
+		}
+		.right .page {
+			margin-top: 3.5em;
+			margin-left: 33%;
+			width: 50vw;
+			height: 29.7cm;
+			height: fit-content;
 		}
 	}
 }
