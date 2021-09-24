@@ -228,7 +228,37 @@
 	margin-right: 5px;
 }
 
-@media only screen and (min-width: 811px) and (max-width: 1366px) and (orientation: landscape) {
+@media only screen and (min-width: 1024px) and (max-width: 1366px) and (orientation: portrait) {
+	.resume-box {
+		position: relative;
+		display: flex;
+		flex-direction: column;
+		width: 100vw;
+		/* padding: 0 10px; */
+	}
+	.resume-container {
+		width: 95vw;
+		height: fit-content;
+		/* padding: 0 10px; */
+	}
+	.resume-preview {
+		visibility: hidden;
+	}
+
+	.MuiTab-wrapper {
+		font-size: large;
+	}
+	.resume-clear-top,
+	.resume-navigation {
+		justify-content: space-between;
+		padding: 0 5%;
+	}
+
+	p {
+		font-size: 1.2em;
+	}
+}
+@media only screen and (min-width: 1024px) and (max-width: 1366px) and (orientation: landscape) {
 	.resume-box {
 		position: relative;
 		display: flex;
@@ -242,19 +272,64 @@
 	.resume-preview {
 		visibility: hidden;
 	}
+
+	.MuiTab-wrapper {
+		font-size: large;
+	}
+	.resume-clear-top,
+	.resume-navigation {
+		justify-content: space-between;
+		padding: 0 5%;
+	}
+
+	.right {
+		width: 60vw;
+		min-height: 100vh;
+		margin: 0 auto;
+		margin-top: 5%;
+	}
+
+	p {
+		font-size: 1.2em;
+	}
+}
+
+@media only screen and (min-width: 768px) and (max-width: 1024px) {
+	.resume-box {
+		position: relative;
+		display: flex;
+		flex-direction: column;
+		width: 109vw;
+	}
+	.resume-container {
+		width: 100vw;
+		height: fit-content;
+		margin: 0 auto;
+	}
+	.resume-preview {
+		visibility: hidden;
+	}
 	.right .page {
 		margin-top: 5em;
-		margin-left: 5%;
+		/* margin-left: 5%; */
 		width: 90vw;
 		height: 29.7cm;
 		height: fit-content;
 	}
+
+	.right {
+		width: 70vw;
+		min-height: 100vh;
+		margin: 0 7%;
+		margin-top: 5%;
+	}
 	.MuiTab-wrapper {
-		font-size: medium;
+		font-size: large;
 	}
 	.resume-clear-top,
 	.resume-navigation {
-		justify-content: space-around;
+		justify-content: space-between;
+		padding: 0 5%;
 	}
 }
 @media only screen and (min-device-width: 280px) and (max-device-width: 737px) {
@@ -281,7 +356,7 @@
 		width: 100vw;
 		margin: 0;
 		display: flex;
-		justify-content: space-between;
+		justify-content: space-around;
 	}
 
 	.right {
@@ -294,8 +369,10 @@
 	.job-desc {
 		font-size: 16px;
 	}
-	.resume-clear-top {
-		justify-content: space-around;
+	.resume-clear-top,
+	.resume-clear {
+		justify-content: space-between;
+		padding: 0 3%;
 	}
 
 	.checkbox-container > ul {
@@ -346,11 +423,12 @@
 			font-size: 17px;
 		}
 		.resume-navigation {
-			justify-content: space-around;
+			justify-content: space-between;
 		}
 		.resume-clear-top,
 		.resume-clear {
-			justify-content: space-around;
+			justify-content: space-between;
+			padding: 0 5%;
 		}
 		.right .page {
 			margin-top: 3.5em;
