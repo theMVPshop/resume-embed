@@ -127,13 +127,13 @@ body {
 		visibility: visible;
 		width: 150px;
 		left: 65%;
-		margin-top: 40px;
 	}
 
 	.btn:hover {
 		color: var(--primary-text-color);
 	}
 }
+
 @media only screen and (min-width: 1024px) and (max-width: 1366px) and (orientation: landscape) {
 	.resume-btn {
 		visibility: visible;
@@ -153,13 +153,14 @@ body {
 		visibility: visible;
 		width: 150px;
 		left: 65%;
+		margin-top: 20px;
 	}
 
 	.btn:hover {
 		color: var(--primary-text-color);
 	}
 }
-@media only screen and (min-width: 768px) and (max-width: 1023px) {
+@media only screen and (min-width: 768px) and (max-width: 1024px) {
 	.resume-btn {
 		visibility: visible;
 		font-size: 12px;
@@ -186,7 +187,7 @@ body {
 	.preview-btn {
 		visibility: visible;
 		width: 120px;
-		margin-left: 35px;
+		margin-left: 55px;
 	}
 
 	.pdf-btn {
@@ -236,6 +237,7 @@ body {
 		width: 120px;
 		margin-right: 10%;
 	}
+
 	.btn:hover {
 		color: var(--primary-text-color);
 	}
@@ -243,16 +245,19 @@ body {
 	.pdf-btn {
 		width: 120px;
 		position: absolute;
-		top: 99.2%;
+		top: 99.3%;
 		left: 10%;
-		z-index: 1;
+		z-index: -1;
 	}
+
 	h2 {
 		font-size: 1.2em;
 	}
+
 	h3 {
 		font-size: 0.9em;
 	}
+
 	.resume-btn {
 		font-size: 9px;
 	}
