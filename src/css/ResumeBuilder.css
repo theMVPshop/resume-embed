@@ -3,7 +3,6 @@
 	display: flex;
 	flex-direction: row;
 	padding: 2%;
-	/* margin-top: 1%; */
 }
 
 .resume-container {
@@ -101,18 +100,12 @@
 	background: white;
 	display: block;
 	margin: 0 auto;
-	/* margin-top: 50px; */
 	margin-bottom: 0.5cm;
 	box-shadow: 0 0 0.5cm #7b7d7d;
 	width: 21cm;
 	height: 29.7cm;
 	height: fit-content;
 }
-/* 
-.save-clear {
-	position: absolute;
-	margin: 0;
-} */
 
 .save-pdf {
 	position: absolute;
@@ -124,7 +117,6 @@
 .resume-titles {
 	text-transform: uppercase;
 	letter-spacing: 3px;
-	/* margin-top: 15px; */
 	font-size: 1.2em;
 	background-color: rgba(128, 128, 128, 0.338);
 }
@@ -180,11 +172,6 @@
 	padding-top: 10px;
 }
 
-/* .resume-divider {
-	margin-top: 25px;
-	margin-bottom: 25px;
-} */
-
 .divider {
 	width: 55%;
 }
@@ -234,13 +221,13 @@
 		display: flex;
 		flex-direction: column;
 		width: 100vw;
-		/* padding: 0 10px; */
 	}
+
 	.resume-container {
 		width: 95vw;
 		height: fit-content;
-		/* padding: 0 10px; */
 	}
+
 	.resume-preview {
 		visibility: hidden;
 	}
@@ -299,10 +286,10 @@
 		position: relative;
 		display: flex;
 		flex-direction: column;
-		width: 109vw;
+		width: 100vw;
 	}
 	.resume-container {
-		width: 100vw;
+		width: 95vw;
 		height: fit-content;
 		margin: 0 auto;
 	}
@@ -310,9 +297,8 @@
 		visibility: hidden;
 	}
 	.right .page {
+		margin: 0 auto;
 		margin-top: 5em;
-		/* margin-left: 5%; */
-		width: 90vw;
 		height: 29.7cm;
 		height: fit-content;
 	}
@@ -320,7 +306,7 @@
 	.right {
 		width: 70vw;
 		min-height: 100vh;
-		margin: 0 7%;
+		margin: 0 10%;
 		margin-top: 5%;
 	}
 	.MuiTab-wrapper {
@@ -337,8 +323,8 @@
 		display: flex;
 		flex-direction: column;
 		min-height: 100vh;
-		width: 90vw;
-		/* overflow: hidden; */
+		width: 85vw;
+		padding: 3%;
 	}
 	.resume-preview {
 		visibility: visible;
@@ -346,7 +332,7 @@
 
 	.resume-container {
 		overflow-x: hidden;
-		width: 100vw;
+		width: 94vw;
 		box-shadow: 0 0 0.5cm #7b7d7d;
 		background-color: white;
 	}
@@ -366,6 +352,7 @@
 	.MuiTab-wrapper {
 		font-size: small;
 	}
+
 	.job-desc {
 		font-size: 16px;
 	}
@@ -381,12 +368,11 @@
 
 	.right .page {
 		margin-top: 3.5em;
-		width: 100vw;
+		width: 94vw;
 		height: 29.7cm;
 		height: fit-content;
 	}
 
-	/* Resume Preview */
 	.resume-titles {
 		font-size: 0.5em;
 	}
@@ -416,9 +402,14 @@
 		width: 90%;
 	}
 	@media only screen and (min-device-width: 568px) and (max-device-width: 823px) and (orientation: landscape) {
-		.resume-container {
-			box-shadow: none;
+		.resume-box {
+			padding: 2%;
 		}
+		.resume-container {
+			width: 96vw;
+			overflow-x: hidden;
+		}
+
 		.checkbox-container > ul {
 			font-size: 17px;
 		}
