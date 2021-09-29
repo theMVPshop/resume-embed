@@ -1,47 +1,4 @@
-import React, {useState} from 'react';
-import { StyleSheet } from '@react-pdf/renderer';
-import Avatar from '@material-ui/core/Avatar';
-import Tooltip from '@material-ui/core/Tooltip';
-import ClearIcon from '@material-ui/icons/Clear';
-import { green, pink } from '@material-ui/core/colors';
-import { makeStyles } from '@material-ui/core/styles';
-// import Example from './Example'
-
-const useStyles = makeStyles((theme) => ({
-  green: {
-    color: '#fff',
-    backgroundColor: green[500],
-    margin: 10,
-  },
-  pink: {
-    color: theme.palette.getContrastText(pink[500]),
-    backgroundColor: pink[500],
-    margin: 10,
-  },
-  root: {
-    // zIndex: -1,
-    position: 'absolute',
-    '& > *': {
-      margin: 0,
-    },
-  },
-}));
-
-// Create PDF Styles
-// const styles = StyleSheet.create({
-//   page: {
-//     flexDirection: 'row',
-//     backgroundColor: '#E4E4E4'
-//   },
-//   section: {
-//     margin: 10,
-//     padding: 10,
-//     flexGrow: 1
-//   }
-// });
-
-//creates access to DOM nodes or React elements created in the Render method
-// const ref = React.createRef();
+import React from 'react';
 
 
 function ResumePaper(props) {
@@ -103,28 +60,6 @@ function ResumePaper(props) {
 
   return (
     <div className='right'>
-      {/* <div className='save-clear'>
-        <Tooltip title='Delete All Data' placement='right'>
-          <Avatar className={classes.pink}>
-            <ClearIcon onClick={props.handleDeleteData} />
-          </Avatar>
-          </Tooltip> */}
-        {/* {generatePdf && 
-        <div>...generating PDF</div>
-        } */}
-
-{/* 
-<Pdf targetRef={ref} filename={`${props.name}.pdf`}>
-          {({ toPdf }) => (
-            <Tooltip title='Save to PDF' placement='right'>
-              <Avatar className={classes.green}>
-                <PictureAsPdfIcon onClick={toPdf} />
-              </Avatar>
-            </Tooltip>
-          )}
-        </Pdf> */}
-       
-      {/* </div> */}
       <div size='A4' className='page' >
         {/* HEADER */}
         <div className='resume-header'>

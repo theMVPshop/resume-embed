@@ -178,6 +178,13 @@ body {
 	.pdfdownload {
 		position: relative;
 	}
+	h2 {
+		font-size: 1.4em;
+	}
+
+	h3 {
+		font-size: 1.3em;
+	}
 }
 
 @media only screen and (min-width: 568px) and (max-width: 823px) and (orientation: landscape) {
@@ -193,7 +200,7 @@ body {
 	.pdf-btn {
 		width: 120px;
 		position: absolute;
-		top: 98.6%;
+		top: 98.76%;
 		left: 20%;
 		z-index: -1;
 		margin-left: 35px;
@@ -204,7 +211,7 @@ body {
 	}
 
 	h2 {
-		font-size: 1.3em;
+		font-size: 1.2em;
 	}
 	h3 {
 		font-size: 1.1em;
@@ -236,6 +243,7 @@ body {
 		visibility: visible;
 		width: 120px;
 		margin-right: 10%;
+		left: 64%;
 	}
 
 	.btn:hover {
