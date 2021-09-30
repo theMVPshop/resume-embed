@@ -297,6 +297,7 @@
 		visibility: hidden;
 	}
 	.right .page {
+		width: 80vw;
 		margin: 0 auto;
 		margin-top: 5em;
 		height: 29.7cm;
@@ -304,11 +305,12 @@
 	}
 
 	.right {
-		width: 70vw;
+		width: 75vw;
 		min-height: 100vh;
 		margin: 0 10%;
 		margin-top: 5%;
 	}
+
 	.MuiTab-wrapper {
 		font-size: large;
 	}
@@ -318,6 +320,7 @@
 		padding: 0 5%;
 	}
 }
+
 @media only screen and (min-device-width: 280px) and (max-device-width: 737px) {
 	.resume-box {
 		display: flex;
@@ -423,8 +426,8 @@
 		}
 		.right .page {
 			margin-top: 3.5em;
-			margin-left: 33%;
-			width: 50vw;
+			margin-left: 30%;
+			width: 60vw;
 			height: 29.7cm;
 			height: fit-content;
 		}

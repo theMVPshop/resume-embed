@@ -51,6 +51,7 @@ body {
 	position: absolute;
 	top: 1%;
 	left: 75%;
+	box-shadow: 0 0 0.3cm #7b7d7d;
 }
 .preview-btn {
 	visibility: hidden;
@@ -58,6 +59,7 @@ body {
 	position: absolute;
 	left: 53%;
 	color: var(--primary-text-color);
+	box-shadow: 0 0 0.3cm #7b7d7d;
 	z-index: 1;
 }
 .sm-btn {
@@ -137,12 +139,13 @@ body {
 @media only screen and (min-width: 1024px) and (max-width: 1366px) and (orientation: landscape) {
 	.resume-btn {
 		visibility: visible;
-		font-size: 12px;
+		font-size: 14px;
 		z-index: 1;
 	}
 
 	.pdf-btn {
 		width: 150px;
+		height: 40px;
 		top: 97.5%;
 		left: 20%;
 		z-index: -1;
@@ -152,12 +155,19 @@ body {
 	.preview-btn {
 		visibility: visible;
 		width: 150px;
+		height: 40px;
 		left: 65%;
 		margin-top: 20px;
 	}
 
 	.btn:hover {
 		color: var(--primary-text-color);
+	}
+}
+
+@media only screen and (min-width: 823px) and (max-width: 823px) and (orientation: landscape) {
+	.preview-btn {
+		left: 45%;
 	}
 }
 @media only screen and (min-width: 768px) and (max-width: 1024px) {
@@ -194,16 +204,17 @@ body {
 	.preview-btn {
 		visibility: visible;
 		width: 120px;
-		margin-left: 55px;
+		margin-left: 20%;
+		margin-top: 3.5%;
 	}
 
 	.pdf-btn {
 		width: 120px;
 		position: absolute;
 		top: 98.76%;
-		left: 20%;
+		left: 8%;
 		z-index: -1;
-		margin-left: 35px;
+		margin-left: 17%;
 	}
 
 	.btn:hover {
@@ -215,6 +226,18 @@ body {
 	}
 	h3 {
 		font-size: 1.1em;
+	}
+}
+@media only screen and (min-width: 812px) and (max-width: 812px) and (orientation: landscape) {
+	.preview-btn {
+		left: 44%;
+
+		margin-top: 2%;
+	}
+
+	.pdf-btn {
+		top: 96%;
+		left: 0%;
 	}
 }
 
@@ -243,7 +266,8 @@ body {
 		visibility: visible;
 		width: 120px;
 		margin-right: 10%;
-		left: 64%;
+		margin-top: 6.6%;
+		left: 65%;
 	}
 
 	.btn:hover {
@@ -253,7 +277,7 @@ body {
 	.pdf-btn {
 		width: 120px;
 		position: absolute;
-		top: 99.3%;
+		top: 99.2%;
 		left: 10%;
 		z-index: -1;
 	}
@@ -267,7 +291,7 @@ body {
 	}
 
 	.resume-btn {
-		font-size: 9px;
+		font-size: 12px;
 	}
 
 	.sm-btn {
@@ -280,5 +304,31 @@ body {
 		display: flex;
 		flex-direction: row;
 		justify-content: space-between;
+	}
+	@media (min-width: 540px) and (max-width: 540px) and (orientation: portrait) {
+		.preview-btn {
+			left: 75%;
+		}
+
+		.pdf-btn {
+			top: 99.7%;
+			left: 12%;
+		}
+	}
+	@media (min-width: 280px) and (max-width: 280px) and (orientation: portrait) {
+		.preview-btn {
+			left: 60%;
+			width: 115px;
+			margin-top: 6.5%;
+		}
+
+		.pdf-btn {
+			top: 99%;
+			left: 0%;
+			width: 115px;
+		}
+		.resume-btn {
+			font-size: 10px;
+		}
 	}
 }

@@ -754,7 +754,7 @@ export default function ResumeBuilder() {
         skill1={skill1}
         skills={skills}
         setSkills={setSkills}
-      /> }
+      /> } 
       </div>
     <PDFDownloadLink className="pdfdownload" document={
     <ResumeDocument
